@@ -22,7 +22,7 @@ Estas son una de las imagenes descargadas.
 
 Objeto:
 
-![vibora](images/vib1.png)
+![vibora](images/vib5.png)
 
 Entorno:
 
@@ -62,7 +62,12 @@ for i in range(1,5):
             
 ```
 
-Y estos son algunos de los resultados obtenidos al correr el codigo...no muy buenos pero creo que pueden funcionar
+Y estos son algunos de los resultados obtenidos al correr el codigo...no muy buenos pero creo que pueden funcionar:
+
+
+![result](images/viboras_2_5_1.jpg)
+
+![result](images/viboras_2_5_3.jpg)
 
 ### Support or Contact
 
