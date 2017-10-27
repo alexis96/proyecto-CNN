@@ -12,6 +12,9 @@ resultados:
 
 Aqui vamos a incluir los pasos que yo hice para instalarlo en windows.......(Proximamente)
 
+### Detalles de la red a usar
+
+Proximamente.....
 
 ### Generando Imagenes
 
@@ -69,6 +72,9 @@ Y estos son algunos de los resultados obtenidos al correr el codigo...no muy bue
 
 ![result](images/viboras_2_5_3.jpg)
 
-### Support or Contact
+Claro que aun en el codigo falta incluir el marcaje para generar el archivo xml
+pero aun nose como hacerle para no tener que ponerlo a mano 
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Pasos para hacer el entrenamiento
+
+
