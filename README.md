@@ -10,8 +10,9 @@ resultados:
 <p align="center">
   <img src="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/img/kites_detections_output.jpg" width=676 height=450>
 </p>
+```
 ![alt text](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/img/kites_detections_output.jpg)
-
+```
 Aqui vamos a incluir los pasos que yo hice para instalarlo en windows.......(Proximamente)
 
 
