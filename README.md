@@ -20,7 +20,7 @@ objetos a reconocer y unos paisajes ".jpg" en donde pondremos nuestros objetos.
 
 Estas son una de las imagenes descargadas:
 
-![vibora](images/vib1.png =400x300){height=50% width=50%}
+![vibora](images/vib1.png {height=50% width=50%})
 
 ![vibora](/images/vib2.png)
 
