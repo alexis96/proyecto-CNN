@@ -31,7 +31,7 @@ Entorno:
 
 ![entorno](images/h2.jpg)
 
-```markdown
+```python
 
 from PIL import Image
 import numpy as np
