@@ -26,7 +26,7 @@ Estas son una de las imagenes descargadas:
 
 <img src="/images/vib1.png" width=50% height=50%>
 
-![entorno](https://github.com/alexis96/proyecto-CNN/blob/master/images/h2.jpg "Entorno")
+![entorno](/images/h2.jpg "Entorno")
 
 ```markdown
 
