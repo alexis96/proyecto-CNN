@@ -5,32 +5,59 @@ de instalacion y uso.
 
 ### Tutorial
 
-siguiendo los pasos de instalacion con una variacion al instalarlo en windows podemos llegar a obtener los siguientes
+siguiendo los pasos de instalación con una variación al instalarlo en windows podemos llegar a obtener los siguientes
 resultados: 
 <p align="center">
   <img src="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/img/kites_detections_output.jpg" width=676 height=450>
 </p>
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+Aqui vamos a incluir los pasos que yo hice para instalarlo en windows.......(Proximamente)
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
 
 ### Generando Imagenes
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Dado el poco conociemiento para generar imagenes con calidad, lo que hice a continuacion fue descargar unas imagenes ".png" de mis
+objetos a reconocer y unos paisajes ".jpg" en donde pondremos nuestros objetos.
+
+Estas son una de las imagenes descargadas:
+
+
+
+```markdown
+
+from PIL import Image
+import numpy as np
+
+for i in range(1,5):
+""" Abriendo las imagenes entorno en donde pondremos nuestros objetos """
+    habitat = "viboras/h" + str(i) + ".jpg"
+    image = Image.open(habitat)#.convert("RGBA")
+    
+    for j in range(1,6):
+    """ Abriendo nuestros objetos """
+        vibora = "viboras/vib" + str(j) + ".png"
+        vib = Image.open(vibora).convert("RGBA")
+  
+        for k in range(10):
+        """ generamos un tamaño aleatorio entre 50 y 130 (se veian bien entre esos tamaños) y mantenemos la relacion de aspecto """
+            size = np.random.randint(50,130)
+            r = size/float(vib.width)
+            sizeheight = int(vib.height * r)
+            #vib = vib.rotate(np.random.randint(180))
+            vib = vib.resize((size,sizeheight),Image.ANTIALIAS)
+            image_copy = image.copy()
+        """ generamos la posición de nuestro objeto(con el nuevo tamaño) sin que se pase de las dimensiones """   
+            posw = np.random.randint((image_copy.width - vib.width))
+            posh = np.random.randint((image_copy.height - vib.height))
+            position = (posw, posh)
+        """ pegamos en nuestro objeto en nuestra imagen entorno y la guardamos """
+            image_copy.paste(vib, position,vib)
+            new_name = "viboras_" + str(i) + "_" + str(j) +"_"+ str(k)+ ".jpg"
+            image_copy.save(new_name)
+            
+```
+
+Y estos son algunos de los resultados obtenidos al correr el codigo...no muy buenos pero creo que pueden funcionar
 
 ### Support or Contact
 
