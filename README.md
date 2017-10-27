@@ -18,14 +18,13 @@ Aqui vamos a incluir los pasos que yo hice para instalarlo en windows.......(Pro
 Dado el poco conociemiento para generar imagenes con calidad, lo que hice a continuacion fue descargar unas imagenes ".png" de mis
 objetos a reconocer y unos paisajes ".jpg" en donde pondremos nuestros objetos.
 
-Estas son una de las imagenes descargadas:
+Estas son una de las imagenes descargadas.
 
+Objeto:
 ![vibora](/images/vib1.png )
 
-<img src="/images/vib1.png" width="50%" height="50%">
 
-<img src="/images/vib1.png" width=50% height=50%>
-
+Entorno:
 ![entorno](/images/h2.jpg "Entorno")
 
 ```markdown
