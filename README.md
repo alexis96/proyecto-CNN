@@ -20,7 +20,11 @@ objetos a reconocer y unos paisajes ".jpg" en donde pondremos nuestros objetos.
 
 Estas son una de las imagenes descargadas:
 
+![vibora](images/vib1.png)
 
+![vibora](/images/vib2.png)
+
+![entorno](https://github.com/alexis96/proyecto-CNN/blob/master/images/h2.jpg "Entorno")
 
 ```markdown
 
