@@ -8,7 +8,7 @@ de instalacion y uso.
 siguiendo los pasos de instalacion con una variacion al instalarlo en windows podemos llegar a obtener los siguientes
 resultados: 
 <p align="center">
-  <img src="g3doc/img/kites_detections_output.jpg" width=676 height=450>
+  <img src="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/img/kites_detections_output.jpg" width=676 height=450>
 </p>
 ```markdown
 Syntax highlighted code block
