@@ -20,9 +20,11 @@ objetos a reconocer y unos paisajes ".jpg" en donde pondremos nuestros objetos.
 
 Estas son una de las imagenes descargadas:
 
-![vibora](/images/vib1.png ){:height="50%" width="50%"}
+![vibora](/images/vib1.png )
 
-![vibora](/images/vib2.png)
+<img src="/images/vib1.png" width="50%" height="50%">
+
+<img src="/images/vib1.png" width=50% height=50%>
 
 ![entorno](https://github.com/alexis96/proyecto-CNN/blob/master/images/h2.jpg "Entorno")
 
