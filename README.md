@@ -7,12 +7,9 @@ de instalacion y uso.
 
 siguiendo los pasos de instalación con una variación al instalarlo en windows podemos llegar a obtener los siguientes
 resultados: 
-<p align="center">
-  <img src="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/img/kites_detections_output.jpg" width=676 height=450>
-</p>
-```
-![alt text](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/img/kites_detections_output.jpg)
-```
+
+![objects](https://2.bp.blogspot.com/-MO3T6Hybpkg/WUG-QjHrHbI/AAAAAAAAB2M/tQKa2ljTkRwYgtok3o_3Y6F5KCbC7a-qQCLcBGAs/s1600/image1.jpg "ejemplo")
+
 Aqui vamos a incluir los pasos que yo hice para instalarlo en windows.......(Proximamente)
 
 
