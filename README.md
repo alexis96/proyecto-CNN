@@ -21,11 +21,12 @@ objetos a reconocer y unos paisajes ".jpg" en donde pondremos nuestros objetos.
 Estas son una de las imagenes descargadas.
 
 Objeto:
-![vibora](/images/vib1.png )
 
+![vibora](/images/vib1.png)
 
 Entorno:
-![entorno](/images/h2.jpg "Entorno")
+
+![entorno](/images/h2.jpg)
 
 ```markdown
 
