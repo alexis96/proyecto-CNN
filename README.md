@@ -31,49 +31,74 @@ Entorno:
 
 ![entorno](images/h2.jpg)
 
-```python
+```xml
+-<annotation>
 
-from PIL import Image
-import numpy as np
+<folder>fotos redes</folder>
 
-for i in range(1,5):
-""" Abriendo las imagenes entorno en donde pondremos nuestros objetos """
-    habitat = "viboras/h" + str(i) + ".jpg"
-    image = Image.open(habitat)#.convert("RGBA")
-    
-    for j in range(1,6):
-    """ Abriendo nuestros objetos """
-        vibora = "viboras/vib" + str(j) + ".png"
-        vib = Image.open(vibora).convert("RGBA")
-  
-        for k in range(10):
-        """ generamos un tamaño aleatorio entre 50 y 130 (se veian bien entre esos tamaños) y mantenemos la relacion de aspecto """
-            size = np.random.randint(50,130)
-            r = size/float(vib.width)
-            sizeheight = int(vib.height * r)
-            #vib = vib.rotate(np.random.randint(180))
-            vib = vib.resize((size,sizeheight),Image.ANTIALIAS)
-            image_copy = image.copy()
-        """ generamos la posición de nuestro objeto(con el nuevo tamaño) sin que se pase de las dimensiones """   
-            posw = np.random.randint((image_copy.width - vib.width))
-            posh = np.random.randint((image_copy.height - vib.height))
-            position = (posw, posh)
-        """ pegamos en nuestro objeto en nuestra imagen entorno y la guardamos """
-            image_copy.paste(vib, position,vib)
-            new_name = "viboras_" + str(i) + "_" + str(j) +"_"+ str(k)+ ".jpg"
-            image_copy.save(new_name)
+<filename>viboras_2_5_3.jpg</filename>
+
+<path>C:\Users\alexi\Downloads\fotos redes\viboras_2_5_3.jpg</path>
+
+
+-<source>
+
+<database>Viboras</database>
+
+</source>
+
+
+-<size>
+
+<width>660</width>
+
+<height>440</height>
+
+<depth>3</depth>
+
+</size>
+
+<segmented>0</segmented>
+
+
+-<object>
+
+<name>vib5</name>
+
+<pose>Unspecified</pose>
+
+<truncated>0</truncated>
+
+<difficult>0</difficult>
+
+
+-<bndbox>
+
+<xmin>57</xmin>
+
+<ymin>225</ymin>
+
+<xmax>137</xmax>
+
+<ymax>282</ymax>
+
+</bndbox>
+
+</object>
+
+</annotation>
+
             
 ```
 
 Y estos son algunos de los resultados obtenidos al correr el codigo...no muy buenos pero creo que pueden funcionar:
 
 
-![result](images/viboras_2_5_1.jpg)
-
 ![result](images/viboras_2_5_3.jpg)
 
-Claro que aun en el codigo falta incluir el marcaje para generar el archivo xml
-pero aun nose como hacerle para no tener que ponerlo a mano 
+![result](images/viboras_4_3_4.jpg)
+
+ 
 
 ### Pasos para hacer el entrenamiento
 
