@@ -34,7 +34,7 @@ Entorno:
 
 Segmento de codigo en el que generamos la imagen y el marcado ([Codigo Completo](https://github.com/alexis96/proyecto-CNN/blob/master/Codigos/fotosRedes.py))
 
-```pyhton
+```python
 for i in range(1,5):
     habitat = "viboras/h" + str(i) + ".jpg"
     print(habitat)
