@@ -121,9 +121,68 @@ Y estos son algunos de los resultados obtenidos al correr el codigo...no muy bue
 
 ![result](images/viboras_4_3_4.jpg)
 
- 
+separamos los datos generados en dos partes uno para el entrenamiento y otro para las pruebas, en una proporcion
+90% entrenamiento, 10% pruebas aproximadamente.
 
+
+una vez generado el marcaje y separado los datos hay que generar los archivos TFRecords 
+para esto primero debemos convertir nuestros XML a un archivo CSV para despues este poderlo
+convertir en un TFRecords para este usamos algunos codigos de [datitran-github](https://github.com/datitran/raccoon_dataset) haciendole
+unas pequeñas modificaciones para nuestro caso.
+
+Usamos primero xml_to_csv.py tratando de obtener una estructura como la siguiente:
+
+```xml
+Object-Detection
+-data/
+--test_labels.csv
+--train_labels.csv
+-images/
+--test/
+---testingimages.jpg
+--train/
+---testingimages.jpg
+--...yourimages.jpg
+-training
+-xml_to_csv.py
+
+```
+
+
+y una vez construido nuestros archivos vamos a usar otro codigo llamado generate_tfrecord.py
+en el que solo vamos a modificar el numero y nombre de nuestras clases en mi caso 5.
+
+```python
+#Remplazar por el nombre de sus clases y añadir en caso de tener mas
+def class_text_to_int(row_label):
+    if row_label == 'clase1':
+        return 1
+    if row_label == 'clase2':
+        return 2
+    if row_label == 'clase3':
+        return 
+    if row_label == 'clase4':
+        return 4
+    if row_label == 'clase5':
+        return 5
+    else:
+        None
+```
+ahora suponiendo que ya tenemos la instalacion de la object-detection api
+ vamos a correr nuestro script generate_tfrecord.py
+
+python3 generate_tfrecord.py 
+  --csv_input=data/train_labels.csv 
+  --output_path=data/train.record
+
+python3 generate_tfrecord.py 
+  --csv_input=data/test_labels.csv 
+  --output_path=data/test.record
+ 
+ 
 ### Pasos para hacer el entrenamiento
+
+Para iniciar 
 
 
 
