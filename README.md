@@ -129,7 +129,7 @@ Y estos son algunos de los resultados obtenidos al correr el codigo...no muy bue
 
 ### Resultados rapidos para mostrar
 
-![result](images/ejemplo1.png
+![result](images/ejemplo1.png)
 
 ![result](images/ejemplo2.png)
 
