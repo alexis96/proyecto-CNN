@@ -130,7 +130,7 @@ para esto primero debemos convertir nuestros XML a un archivo CSV para despues e
 convertir en un TFRecords para este usamos algunos codigos de [datitran-github](https://github.com/datitran/raccoon_dataset) haciendole
 unas pequeñas modificaciones para nuestro caso.
 
-Usamos primero xml_to_csv.py tratando de obtener una estructura como la siguiente:
+Usamos primero [xml_to_csv.py](https://github.com/alexis96/proyecto-CNN/blob/master/Codigos/xml_to_csv.py)tratando de obtener una estructura como la siguiente:
 
 ```xml
 Object-Detection
@@ -149,7 +149,7 @@ Object-Detection
 ```
 
 
-y una vez construido nuestros archivos vamos a usar otro codigo llamado generate_tfrecord.py
+y una vez construido nuestros archivos vamos a usar otro codigo llamado [generate_tfrecord.py](https://github.com/alexis96/proyecto-CNN/blob/master/Codigos/generate_tfrecord.py)
 en el que solo vamos a modificar el numero y nombre de nuestras clases en mi caso 5.
 
 ```python
@@ -171,19 +171,56 @@ def class_text_to_int(row_label):
 ahora suponiendo que ya tenemos la instalacion de la object-detection api
  vamos a correr nuestro script generate_tfrecord.py
 
-python3 generate_tfrecord.py 
+python generate_tfrecord.py 
   --csv_input=data/train_labels.csv 
   --output_path=data/train.record
 
-python3 generate_tfrecord.py 
+python generate_tfrecord.py 
   --csv_input=data/test_labels.csv 
   --output_path=data/test.record
+  
+una ves hecho esto ya tenemos creado nuestros records para la prueba y el 
+entrenamiento.
  
  
 ### Pasos para hacer el entrenamiento
 
-Para iniciar 
+Para iniciar el entrenamiento y hacer esto un poco mas rapido vamos a tomar un
+modelo pre-entrenado obtenido con el siguiente comando:
 
+-wget http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_11_06_2017.tar.gz
+
+una vez teniendo este en nuestra carpeta vamos a copiar el archivo para hacer configuracion del modelo 
+para nuestro que se encuentra en la carpeta de object_detection/samples/configs/ssd_mobilenet_v1_pets.config
+en el que vamos a modificar algunas cosas comentadas [aqui](https://github.com/alexis96/proyecto-CNN/blob/master/Codigos/ssd_mobilenet_v1_pets.config)
+
+ahora en nuestra carpeta training vamos a poner la configuracion modificada y vamos a crear el
+object-detection.pbtxt con el siguiente contenido dependiendo del num de clases del proyecto:
+```xml
+item {
+  id: 1
+  name: 'vib1'
+}
+item {
+  id: 2
+  name: 'vib2'
+}
+.
+.
+.
+
+```
+ya con esto estamos listos para entrenar copiamos las carpetas data, images y training en la carpeta
+object-detection de la api 
+
+y corremos el siguiente comando y listo
+
+#from models/research/object-detection
+python train.py --logtosderr --train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v1_pets.config
+
+y despues este para checar el procedimiento
+
+tensorboard --logdir=training/
 
 
 ### Resultados rapidos para mostrar
@@ -192,6 +229,8 @@ Para iniciar
 
 ![result](images/ejemplo2.png)
 
-![result](images/ejemplo3.png)
+![result](images/ejemplo4.png)
+
+![result](images/ejemplo5.png)
 
 
