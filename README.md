@@ -229,8 +229,8 @@ tensorboard --logdir=training/
 
 ![result](images/ejemplo2.png)
 
-![result](images/ejemplo4.png)
+![result](images/ejemplo7.png)
 
-![result](images/ejemplo5.png)
+![result](images/ejemplo6.png)
 
 
