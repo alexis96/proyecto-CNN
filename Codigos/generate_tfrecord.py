@@ -1,10 +1,10 @@
 
 """
-Usage:
-  # From tensorflow/models/
-  # Create train data:
+Uso:
+  # Dentro de tensorflow/models/
+  # Creacion de datos de entrenamiento:
   python generate_tfrecord.py --csv_input=data/train_labels.csv  --output_path=train.record
-  # Create test data:
+  # Creacion de datos de prueba:
   python generate_tfrecord.py --csv_input=data/test_labels.csv  --output_path=test.record
 """
 from __future__ import division
@@ -26,7 +26,7 @@ flags.DEFINE_string('output_path', '', 'Path to output TFRecord')
 FLAGS = flags.FLAGS
 
 
-# TO-DO replace this with label map
+# Remplazar por sus clases y nombres, puede agregar o quitar.
 def class_text_to_int(row_label):
     if row_label == 'vib1':
         return 1
