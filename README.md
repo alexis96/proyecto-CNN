@@ -12,9 +12,14 @@ resultados:
 
 Aqui vamos a incluir los pasos que yo hice para instalarlo en windows con maquina virtual de linux.......(Proximamente)
 
-### Detalles de la red a usar
+### Red convolucional
+Estas son redes que generalmente se usan para procesar imagenes y estan basada en operaciones de convolucion.  
+las redes se componen de tres tipos de capas:
+1. capas de convolucion :  Consisten en filtrar una imagen usando máscaras aprendidas por la misma red
+2. Una capa de pooling o de reducción: la cual va a reducir la cantidad de parámetros al quedarse con las características más comunes.
+3. Capas totalmente conectadas, las cuales se encargan de hacer la clasificacion final.
 
-Proximamente.....
+
 
 ### Generando Imagenes
 
