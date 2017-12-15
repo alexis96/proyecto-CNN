@@ -237,11 +237,17 @@ y despues este para checar el procedimiento
 tensorboard --logdir=training/
 
 
-### Resultados rapidos para mostrar
+### Resultados con los datos de entrenamiento
 
 ![result](images/ejemplo1.png)
 
 ![result](images/ejemplo2.png)
+
+### Resultados con datos externos
+Estas son imagenes extraidas de internet en las cuales podemos ver que la red funciona bien pero dada la construccion
+de los datos de entrenamiento en donde todas las vivoras son enrolladas tiene algunos problemas al identificar algunas
+curvas tanto como para identificar dos objetos como podemos ver.
+
 
 ![result](images/ejemplo7.png)
 
