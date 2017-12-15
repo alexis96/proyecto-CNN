@@ -19,6 +19,9 @@ las redes se componen de tres tipos de capas:
 2. Una capa de pooling o de reducción: la cual va a reducir la cantidad de parámetros al quedarse con las características más comunes.
 3. Capas totalmente conectadas, las cuales se encargan de hacer la clasificacion final.
 
+#### R-CNN
+lrkjeklrjf'lvjfd;ljgf;dlkvj
+
 
 
 ### Generando Imagenes
