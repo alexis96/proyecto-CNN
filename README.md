@@ -19,8 +19,14 @@ las redes se componen de tres tipos de capas:
 2. Una capa de pooling o de reducción: la cual va a reducir la cantidad de parámetros al quedarse con las características más comunes.
 3. Capas totalmente conectadas, las cuales se encargan de hacer la clasificacion final.
 
-#### R-CNN
-lrkjeklrjf'lvjfd;ljgf;dlkvj
+#### Faster R-CNN
+La Faster R-CNN es una red neuronal optimizada en la que podemos hacer tanto la clasificacion como la localizacion de objetos implementando en la etapa final dos redes neuronales que a partir de el ultimo mapa de caracteristicas obtenidas de las capas
+de convolucion y pooling, se entrena una para hacer la localizacion llamada Region proposal network, a partir de estas 
+localizaciones y el mapa de caracteristicas entrenamos otra red para hacer la clasificacion de los objetos localizados.
+
+
+Para el caso de este proyecto usamos un modelo pre-entrenado, en el cual podemos hacer ajustes en los parametros de algunos
+elementos de la red que los podemos encontrar en la configuracion del modelo [aqui](https://github.com/alexis96/proyecto-CNN/blob/master/Codigos/ssd_mobilenet_v1_pets.config)
 
 
 
